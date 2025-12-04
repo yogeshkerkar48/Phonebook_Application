@@ -137,11 +137,11 @@ appphone/
 Backend `.env` file:
 
 ```env
-DB_HOST=localhost
-DB_PORT=3306
-DB_USER=root
-DB_PASSWORD=root
-DB_NAME=phonebook_db
+DB_HOST=hostname
+DB_PORT=portnumber
+DB_USER=user
+DB_PASSWORD=password
+DB_NAME=dbname
 ```
 
 ## Development
