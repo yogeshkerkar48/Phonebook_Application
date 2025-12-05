@@ -35,7 +35,7 @@ import ContactForm from './components/ContactForm.vue'
 import ContactList from './components/ContactList.vue'
 import ContactDetail from './components/ContactDetail.vue'
 
-const API_URL = 'http://localhost:8001/contacts'
+const API_URL = 'http://localhost:8000/contacts'
 
 export default {
   name: 'App',

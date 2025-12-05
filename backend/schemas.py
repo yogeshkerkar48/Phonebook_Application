@@ -1,5 +1,6 @@
 from pydantic import BaseModel, EmailStr, Field
 from typing import Optional
+from datetime import datetime
 
 class ContactBase(BaseModel):
     name: str = Field(..., min_length=1, max_length=100, description="Contact name")
@@ -18,6 +19,7 @@ class ContactUpdate(BaseModel):
 
 class Contact(ContactBase):
     id: int
+    created_at: datetime
 
     class Config:
         from_attributes = True

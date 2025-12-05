@@ -10,6 +10,11 @@
 
       <div class="detail-content">
         <div class="detail-section">
+          <div class="detail-label">ID</div>
+          <div class="detail-value">#{{ contact.id }}</div>
+        </div>
+
+        <div class="detail-section">
           <div class="detail-label">Name</div>
           <div class="detail-value">{{ contact.name }}</div>
         </div>
@@ -35,6 +40,11 @@
         <div v-if="contact.address" class="detail-section">
           <div class="detail-label">Address</div>
           <div class="detail-value">{{ contact.address }}</div>
+        </div>
+
+        <div v-if="contact.created_at" class="detail-section">
+          <div class="detail-label">Created At</div>
+          <div class="detail-value">{{ formatDate(contact.created_at) }}</div>
         </div>
       </div>
 
@@ -64,6 +74,10 @@ export default {
     handleEdit() {
       this.$emit('edit', this.contact)
       this.$emit('close')
+    },
+    formatDate(dateString) {
+      if (!dateString) return ''
+      return new Date(dateString).toLocaleString()
     }
   }
 }

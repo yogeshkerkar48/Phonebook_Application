@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, DateTime, func
 from database import Base
 
 class Contact(Base):
@@ -9,6 +9,7 @@ class Contact(Base):
     phone = Column(String(20), nullable=False)
     email = Column(String(100), nullable=True)
     address = Column(String(255), nullable=True)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
 
     def __repr__(self):
-        return f"<Contact(id={self.id}, name='{self.name}', phone='{self.phone}')>"
+        return f"<Contact(id={self.id}, name='{self.name}', phone='{self.phone}', created_at='{self.created_at}')>"
