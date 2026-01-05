@@ -102,9 +102,8 @@ export default {
   methods: {
     handleSubmit() {
       this.$emit('submit', { ...this.formData })
-      if (!this.isEditing) {
-        this.resetForm()
-      }
+      // Don't reset form here - let parent component handle success/error
+      // Form will only reset on successful submission (when navigating away)
     },
     handleCancel() {
       this.$emit('cancel')

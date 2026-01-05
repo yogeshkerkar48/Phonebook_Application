@@ -21,7 +21,8 @@ try:
     
     cursor = connection.cursor()
     cursor.execute("DROP TABLE IF EXISTS contacts")
-    print("[SUCCESS] Table 'contacts' dropped successfully.")
+    cursor.execute("DROP TABLE IF EXISTS users")
+    print("[SUCCESS] Tables dropped successfully.")
     
     cursor.close()
     connection.close()

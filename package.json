@@ -1,0 +1,24 @@
+{
+  "name": "regauthen",
+  "version": "1.0.0",
+  "description": "A modern, full-stack phonebook application for managing contacts with a beautiful UI.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yogeshkerkar48/Phonebook_Application.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/yogeshkerkar48/Phonebook_Application/issues"
+  },
+  "homepage": "https://github.com/yogeshkerkar48/Phonebook_Application#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^24.10.1",
+    "otplib": "^12.0.1"
+  }
+}
