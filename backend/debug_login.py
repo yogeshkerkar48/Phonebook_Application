@@ -3,7 +3,7 @@ import models
 import auth
 
 db = SessionLocal()
-email = "2125A0415@bvrit.edu.in"
+email = "2125A0415@gmail.com"
 user = db.query(models.User).filter(models.User.email == email).first()
 
 if user:
